@@ -15,7 +15,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -36,6 +35,15 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+}
+
+@Composable
+fun DiceRollerApp() {
+    DiceWithButtonAndImage(
+        modifier = Modifier
+            .fillMaxSize()
+            .wrapContentSize(Alignment.Center)
+    )
 }
 
 @Composable
@@ -65,11 +73,7 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun DiceRollerApp() {
-    DiceWithButtonAndImage(
-        modifier = Modifier
-            .fillMaxSize()
-            .wrapContentSize(Alignment.Center)
-    )
+fun DiceRollerAppPreview() {
+    DiceRollerApp()
 }
 
